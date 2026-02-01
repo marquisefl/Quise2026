@@ -1,0 +1,494 @@
+---
+/**
+ * Case Study Detail Page
+ *
+ * Dynamic page for individual case studies.
+ * Premium, editorial layout for presenting design work.
+ *
+ * NOTE: Content requires user input.
+ * TODO placeholders indicate where actual content should be added.
+ */
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Button from "../../components/Button.astro";
+import { siteData } from "../../content/site-data";
+
+export function getStaticPaths() {
+  return siteData.caseStudies.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+const title = `${project.title} | Marquise Fleming`;
+
+// Find previous and next projects for navigation
+const currentIndex = siteData.caseStudies.findIndex((p) => p.slug === project.slug);
+const prevProject = siteData.caseStudies[currentIndex - 1] || null;
+const nextProject = siteData.caseStudies[currentIndex + 1] || null;
+---
+
+<BaseLayout title={title} description={project.overview}>
+  <article class="case-study">
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-meta animate-fade-in">
+            <span class="project-company">{project.company}</span>
+            <span class="divider">/</span>
+            <span class="project-role">{project.role}</span>
+          </div>
+
+          <h1 class="hero-title animate-fade-in stagger-1">{project.title}</h1>
+
+          <p class="hero-overview animate-fade-in stagger-2">{project.overview}</p>
+
+          <div class="hero-details animate-fade-in stagger-3">
+            <div class="detail">
+              <span class="detail-label">Timeline</span>
+              <span class="detail-value">{project.timeline}</span>
+            </div>
+            <div class="detail">
+              <span class="detail-label">Role</span>
+              <span class="detail-value">{project.role}</span>
+            </div>
+            {project.tags.length > 0 && (
+              <div class="detail">
+                <span class="detail-label">Focus</span>
+                <span class="detail-value">{project.tags.join(", ")}</span>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Image -->
+    <section class="hero-image">
+      <div class="container-wide">
+        <div class="image-placeholder">
+          <!-- TODO: Replace with actual project hero image -->
+          <span class="placeholder-text">Hero Image</span>
+          <span class="placeholder-hint">TODO: Add hero image for {project.title}</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-wrapper">
+            <span class="section-label">01</span>
+            <span class="section-name">The Challenge</span>
+          </div>
+          <div class="section-content">
+            <h2 class="section-title">Problem</h2>
+            <p class="section-text">{project.problem}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="content-section alt-bg">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-wrapper">
+            <span class="section-label">02</span>
+            <span class="section-name">The Process</span>
+          </div>
+          <div class="section-content">
+            <div class="process-grid">
+              <div class="process-item">
+                <h3 class="process-title">Research</h3>
+                <p class="process-text">{project.process.research}</p>
+              </div>
+              <div class="process-item">
+                <h3 class="process-title">Ideation</h3>
+                <p class="process-text">{project.process.ideation}</p>
+              </div>
+              <div class="process-item">
+                <h3 class="process-title">Design</h3>
+                <p class="process-text">{project.process.design}</p>
+              </div>
+              <div class="process-item">
+                <h3 class="process-title">Testing</h3>
+                <p class="process-text">{project.process.testing}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Image Gallery Placeholder -->
+    <section class="gallery-section">
+      <div class="container-wide">
+        <div class="gallery-grid">
+          <div class="image-placeholder gallery-item">
+            <span class="placeholder-text">Image 1</span>
+          </div>
+          <div class="image-placeholder gallery-item">
+            <span class="placeholder-text">Image 2</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-wrapper">
+            <span class="section-label">03</span>
+            <span class="section-name">The Solution</span>
+          </div>
+          <div class="section-content">
+            <h2 class="section-title">Solution</h2>
+            <p class="section-text">{project.solution}</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Outcomes Section -->
+    <section class="content-section alt-bg">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-wrapper">
+            <span class="section-label">04</span>
+            <span class="section-name">The Results</span>
+          </div>
+          <div class="section-content">
+            <h2 class="section-title">Outcomes</h2>
+            <p class="section-text">{project.outcomes.impact}</p>
+
+            {project.outcomes.metrics.length > 0 && (
+              <ul class="metrics-list">
+                {project.outcomes.metrics.map((metric) => (
+                  <li class="metric-item">{metric}</li>
+                ))}
+              </ul>
+            )}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Navigation -->
+    <nav class="project-nav">
+      <div class="container">
+        <div class="nav-grid">
+          {prevProject ? (
+            <a href={`/work/${prevProject.slug}`} class="nav-link nav-prev">
+              <span class="nav-direction">&larr; Previous</span>
+              <span class="nav-title">{prevProject.title}</span>
+            </a>
+          ) : (
+            <div></div>
+          )}
+
+          {nextProject ? (
+            <a href={`/work/${nextProject.slug}`} class="nav-link nav-next">
+              <span class="nav-direction">Next &rarr;</span>
+              <span class="nav-title">{nextProject.title}</span>
+            </a>
+          ) : (
+            <div></div>
+          )}
+        </div>
+
+        <div class="nav-all">
+          <Button href="/work" variant="outline">
+            View All Work
+          </Button>
+        </div>
+      </div>
+    </nav>
+  </article>
+</BaseLayout>
+
+<style>
+  .case-study {
+    padding-top: 100px;
+  }
+
+  /* Hero */
+  .hero {
+    padding: var(--space-16) 0 var(--space-20);
+  }
+
+  .hero-content {
+    max-width: 800px;
+  }
+
+  .hero-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-6);
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+  }
+
+  .divider {
+    color: var(--color-gray-300);
+  }
+
+  .hero-title {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tighter);
+    margin-bottom: var(--space-8);
+  }
+
+  .hero-overview {
+    font-size: var(--text-xl);
+    color: var(--color-gray-600);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-12);
+  }
+
+  .hero-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-10);
+  }
+
+  .detail {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+
+  .detail-label {
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-gray-400);
+  }
+
+  .detail-value {
+    font-size: var(--text-base);
+    font-weight: var(--font-medium);
+  }
+
+  /* Hero Image */
+  .hero-image {
+    margin-bottom: var(--space-24);
+  }
+
+  .container-wide {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-6);
+  }
+
+  @media (min-width: 768px) {
+    .container-wide {
+      padding: 0 var(--space-12);
+    }
+  }
+
+  .image-placeholder {
+    aspect-ratio: 16 / 9;
+    background-color: var(--color-gray-100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+  }
+
+  .placeholder-text {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-light);
+    color: var(--color-gray-300);
+  }
+
+  .placeholder-hint {
+    font-size: var(--text-sm);
+    color: var(--color-gray-400);
+  }
+
+  /* Content Sections */
+  .content-section {
+    padding: var(--space-20) 0;
+  }
+
+  .content-section.alt-bg {
+    background-color: var(--color-gray-50);
+  }
+
+  .section-grid {
+    display: grid;
+    gap: var(--space-8);
+  }
+
+  @media (min-width: 1024px) {
+    .section-grid {
+      grid-template-columns: 200px 1fr;
+      gap: var(--space-16);
+    }
+  }
+
+  .section-label-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .section-label {
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--color-gray-400);
+  }
+
+  .section-name {
+    font-size: var(--text-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-gray-500);
+  }
+
+  .section-content {
+    max-width: 700px;
+  }
+
+  .section-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-6);
+  }
+
+  .section-text {
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Process Grid */
+  .process-grid {
+    display: grid;
+    gap: var(--space-10);
+  }
+
+  @media (min-width: 768px) {
+    .process-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .process-title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-3);
+  }
+
+  .process-text {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+    line-height: var(--leading-relaxed);
+  }
+
+  /* Gallery */
+  .gallery-section {
+    padding: var(--space-16) 0;
+  }
+
+  .gallery-grid {
+    display: grid;
+    gap: var(--space-6);
+  }
+
+  @media (min-width: 768px) {
+    .gallery-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  .gallery-item {
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Metrics */
+  .metrics-list {
+    list-style: none;
+    margin-top: var(--space-8);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+  }
+
+  .metric-item {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    padding-left: var(--space-6);
+    position: relative;
+  }
+
+  .metric-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 16px;
+    height: 1px;
+    background-color: var(--color-black);
+  }
+
+  /* Navigation */
+  .project-nav {
+    padding: var(--space-20) 0;
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .nav-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    margin-bottom: var(--space-12);
+  }
+
+  .nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    padding: var(--space-6);
+    background-color: var(--color-gray-50);
+    transition: background-color var(--transition-fast);
+  }
+
+  .nav-link:hover {
+    background-color: var(--color-gray-100);
+    opacity: 1;
+  }
+
+  .nav-prev {
+    text-align: left;
+  }
+
+  .nav-next {
+    text-align: right;
+  }
+
+  .nav-direction {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+  }
+
+  .nav-title {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+  }
+
+  .nav-all {
+    text-align: center;
+  }
+</style>

@@ -1,0 +1,119 @@
+---
+/**
+ * Work Index Page
+ *
+ * Displays all case studies in a grid layout.
+ * Clean, minimal design with hover interactions.
+ */
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import ProjectCard from "../../components/ProjectCard.astro";
+import SectionHeader from "../../components/SectionHeader.astro";
+import { siteData } from "../../content/site-data";
+
+const title = "Work | Marquise Fleming";
+const description = "Selected projects and case studies showcasing UI/UX design work.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="work-page">
+    <div class="container">
+      <!-- Page Header -->
+      <header class="page-header">
+        <span class="page-label animate-fade-in">Portfolio</span>
+        <h1 class="page-title animate-fade-in stagger-1">Selected Work</h1>
+        <p class="page-intro animate-fade-in stagger-2">
+          A collection of projects showcasing my approach to user-centered design,
+          from research and strategy to final implementation.
+        </p>
+      </header>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid">
+        {siteData.caseStudies.map((project, index) => (
+          <ProjectCard
+            slug={project.slug}
+            title={project.title}
+            company={project.company}
+            thumbnail={project.thumbnail}
+            tags={project.tags}
+            index={index}
+          />
+        ))}
+      </div>
+
+      <!-- Note about placeholder content -->
+      <aside class="content-note">
+        <p>
+          <strong>Note:</strong> Case study content requires user input.
+          See <code>src/content/site-data.ts</code> to add project details.
+        </p>
+      </aside>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .work-page {
+    padding-top: 120px;
+    padding-bottom: var(--space-32);
+  }
+
+  .page-header {
+    margin-bottom: var(--space-20);
+    max-width: 700px;
+  }
+
+  .page-label {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-gray-500);
+    margin-bottom: var(--space-4);
+  }
+
+  .page-title {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tighter);
+    margin-bottom: var(--space-6);
+  }
+
+  .page-intro {
+    font-size: var(--text-xl);
+    color: var(--color-gray-600);
+    line-height: var(--leading-relaxed);
+  }
+
+  .projects-grid {
+    display: grid;
+    gap: var(--space-16);
+    margin-bottom: var(--space-16);
+  }
+
+  @media (min-width: 768px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-10);
+    }
+  }
+
+  .content-note {
+    padding: var(--space-6);
+    background-color: var(--color-gray-50);
+    border-left: 2px solid var(--color-gray-300);
+    font-size: var(--text-sm);
+    color: var(--color-gray-600);
+  }
+
+  .content-note code {
+    font-family: var(--font-family-mono);
+    font-size: var(--text-xs);
+    background-color: var(--color-gray-100);
+    padding: var(--space-1) var(--space-2);
+    border-radius: var(--radius-sm);
+  }
+</style>

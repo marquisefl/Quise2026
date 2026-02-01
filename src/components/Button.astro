@@ -1,0 +1,110 @@
+---
+/**
+ * Button Component
+ *
+ * Reusable button with multiple variants.
+ */
+
+interface Props {
+  href?: string;
+  variant?: "primary" | "secondary" | "outline";
+  size?: "sm" | "md" | "lg";
+  external?: boolean;
+  class?: string;
+}
+
+const {
+  href,
+  variant = "primary",
+  size = "md",
+  external = false,
+  class: className
+} = Astro.props;
+
+const isLink = !!href;
+const Element = isLink ? "a" : "button";
+
+const externalProps = external
+  ? { target: "_blank", rel: "noopener noreferrer" }
+  : {};
+---
+
+<Element
+  href={isLink ? href : undefined}
+  class:list={["button", `button--${variant}`, `button--${size}`, className]}
+  {...externalProps}
+>
+  <slot />
+</Element>
+
+<style>
+  .button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-family: inherit;
+    font-weight: var(--font-medium);
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition:
+      background-color var(--transition-fast),
+      color var(--transition-fast),
+      transform var(--transition-fast);
+  }
+
+  .button:hover {
+    opacity: 1;
+  }
+
+  .button:active {
+    transform: scale(0.98);
+  }
+
+  /* Variants */
+  .button--primary {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  .button--primary:hover {
+    background-color: var(--color-gray-800);
+  }
+
+  .button--secondary {
+    background-color: var(--color-gray-100);
+    color: var(--color-black);
+  }
+
+  .button--secondary:hover {
+    background-color: var(--color-gray-200);
+  }
+
+  .button--outline {
+    background-color: transparent;
+    color: var(--color-black);
+    border: 1px solid var(--color-black);
+  }
+
+  .button--outline:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+
+  /* Sizes */
+  .button--sm {
+    font-size: var(--text-sm);
+    padding: var(--space-2) var(--space-4);
+  }
+
+  .button--md {
+    font-size: var(--text-base);
+    padding: var(--space-3) var(--space-6);
+  }
+
+  .button--lg {
+    font-size: var(--text-lg);
+    padding: var(--space-4) var(--space-8);
+  }
+</style>

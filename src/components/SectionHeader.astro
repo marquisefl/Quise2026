@@ -1,0 +1,59 @@
+---
+/**
+ * Section Header Component
+ *
+ * Reusable section header with label, title, and optional description.
+ */
+
+interface Props {
+  label?: string;
+  title: string;
+  description?: string;
+  align?: "left" | "center";
+}
+
+const { label, title, description, align = "left" } = Astro.props;
+---
+
+<header class:list={["section-header", { centered: align === "center" }]}>
+  {label && <span class="section-label">{label}</span>}
+  <h2 class="section-title">{title}</h2>
+  {description && <p class="section-description">{description}</p>}
+</header>
+
+<style>
+  .section-header {
+    margin-bottom: var(--space-12);
+    max-width: 700px;
+  }
+
+  .section-header.centered {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-label {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-gray-500);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-description {
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-relaxed);
+    margin-bottom: 0;
+  }
+</style>

@@ -1,0 +1,240 @@
+{
+  "extractionMeta": {
+    "sourceUrl": "https://www.marquisefleming.com",
+    "extractionDate": "2026-02-01",
+    "status": "partial",
+    "limitations": [
+      "Primary website inaccessible",
+      "Behance profile blocked (403)",
+      "LinkedIn profile blocked (403)",
+      "No case study content could be extracted"
+    ]
+  },
+  "profile": {
+    "name": "Marquise Fleming",
+    "title": "Manager, UI & UX",
+    "currentCompany": "ABM Industries",
+    "location": "Atlanta Metropolitan Area",
+    "tagline": "TODO: Add professional tagline",
+    "bio": "TODO: Add personal bio (2-3 paragraphs about design philosophy, approach, and background)",
+    "headshotUrl": "TODO: Add professional headshot URL"
+  },
+  "pages": {
+    "home": {
+      "url": "/",
+      "type": "Home",
+      "title": "Marquise Fleming | UI/UX Designer",
+      "hero": {
+        "headline": "TODO: Add hero headline",
+        "subheadline": "TODO: Add hero subheadline describing expertise",
+        "cta": "View Work"
+      },
+      "intro": "TODO: Add brief introduction paragraph for homepage",
+      "featuredProjects": "TODO: Reference 3-4 featured case studies"
+    },
+    "work": {
+      "url": "/work",
+      "type": "Work Index",
+      "title": "Work | Marquise Fleming",
+      "intro": "TODO: Add work page introduction",
+      "projects": []
+    },
+    "about": {
+      "url": "/about",
+      "type": "About",
+      "title": "About | Marquise Fleming",
+      "sections": {
+        "intro": "TODO: Add about page intro",
+        "story": "TODO: Add personal story/journey",
+        "philosophy": "TODO: Add design philosophy",
+        "approach": "TODO: Add design approach/process description"
+      }
+    },
+    "experience": {
+      "url": "/experience",
+      "type": "Experience/Resume",
+      "title": "Experience | Marquise Fleming",
+      "workHistory": [
+        {
+          "company": "ABM Industries",
+          "role": "Manager, UI & UX",
+          "period": "TODO: Add dates",
+          "description": "TODO: Add role description",
+          "highlights": []
+        },
+        {
+          "company": "Y Media Labs",
+          "role": "Senior UI & UX Designer",
+          "period": "TODO: Add dates",
+          "description": "TODO: Add role description - Creative technology company",
+          "highlights": []
+        },
+        {
+          "company": "Province Brands of Canada",
+          "role": "UI & UX Designer",
+          "period": "TODO: Add dates",
+          "description": "TODO: Add role description - Beverage company",
+          "highlights": []
+        },
+        {
+          "company": "You42",
+          "role": "UI & UX Designer",
+          "period": "TODO: Add dates",
+          "description": "TODO: Add role description - Technology company for content creators",
+          "highlights": []
+        },
+        {
+          "company": "Devign",
+          "role": "UI & UX Designer",
+          "period": "TODO: Add dates",
+          "description": "TODO: Add role description - Design agency",
+          "highlights": []
+        },
+        {
+          "company": "The Creative Momentum",
+          "role": "UI & UX Designer",
+          "period": "TODO: Add dates",
+          "description": "TODO: Add role description - Advertising and marketing firm",
+          "highlights": []
+        },
+        {
+          "company": "Peterson School of Tennis",
+          "role": "UI Designer",
+          "period": "TODO: Add dates",
+          "description": "TODO: Add role description - Sports/Education",
+          "highlights": []
+        }
+      ],
+      "education": [
+        {
+          "institution": "Kennesaw State University",
+          "credential": "Information Technology",
+          "year": "TODO: Add graduation year"
+        },
+        {
+          "institution": "IxDF - The Interaction Design Foundation",
+          "credential": "UX Designer Certification",
+          "year": "TODO: Add completion year"
+        }
+      ],
+      "skills": {
+        "design": [
+          "User Interface Design",
+          "User Experience Design",
+          "User-Centered Design",
+          "Design Thinking",
+          "TODO: Add additional design skills"
+        ],
+        "tools": [
+          "TODO: Add design tools (Figma, Sketch, etc.)"
+        ],
+        "technical": [
+          "TODO: Add technical skills"
+        ]
+      }
+    },
+    "contact": {
+      "url": "/contact",
+      "type": "Contact",
+      "title": "Contact | Marquise Fleming",
+      "email": "TODO: Add contact email",
+      "social": {
+        "linkedin": "https://www.linkedin.com/in/marquise-fleming/",
+        "behance": "https://www.behance.net/marquisefl53ff",
+        "dribbble": "TODO: Add Dribbble URL if exists",
+        "twitter": "TODO: Add Twitter/X URL if exists"
+      },
+      "message": "TODO: Add contact page message"
+    }
+  },
+  "caseStudies": [
+    {
+      "id": "case-study-1",
+      "slug": "TODO-project-slug",
+      "title": "TODO: Case Study 1 Title",
+      "company": "TODO: Company name",
+      "role": "TODO: Your role",
+      "timeline": "TODO: Project timeline",
+      "thumbnail": "TODO: Add thumbnail image URL",
+      "heroImage": "TODO: Add hero image URL",
+      "overview": "TODO: Project overview (2-3 sentences)",
+      "problem": "TODO: Problem statement",
+      "solution": "TODO: Solution description",
+      "process": {
+        "research": "TODO: Research phase description",
+        "ideation": "TODO: Ideation phase description",
+        "design": "TODO: Design phase description",
+        "testing": "TODO: Testing/validation phase description"
+      },
+      "outcomes": {
+        "metrics": [],
+        "impact": "TODO: Describe impact"
+      },
+      "images": [],
+      "tags": []
+    },
+    {
+      "id": "case-study-2",
+      "slug": "TODO-project-slug-2",
+      "title": "TODO: Case Study 2 Title",
+      "company": "TODO: Company name",
+      "role": "TODO: Your role",
+      "timeline": "TODO: Project timeline",
+      "thumbnail": "TODO: Add thumbnail image URL",
+      "heroImage": "TODO: Add hero image URL",
+      "overview": "TODO: Project overview (2-3 sentences)",
+      "problem": "TODO: Problem statement",
+      "solution": "TODO: Solution description",
+      "process": {
+        "research": "TODO: Research phase description",
+        "ideation": "TODO: Ideation phase description",
+        "design": "TODO: Design phase description",
+        "testing": "TODO: Testing/validation phase description"
+      },
+      "outcomes": {
+        "metrics": [],
+        "impact": "TODO: Describe impact"
+      },
+      "images": [],
+      "tags": []
+    },
+    {
+      "id": "case-study-3",
+      "slug": "TODO-project-slug-3",
+      "title": "TODO: Case Study 3 Title",
+      "company": "TODO: Company name",
+      "role": "TODO: Your role",
+      "timeline": "TODO: Project timeline",
+      "thumbnail": "TODO: Add thumbnail image URL",
+      "heroImage": "TODO: Add hero image URL",
+      "overview": "TODO: Project overview (2-3 sentences)",
+      "problem": "TODO: Problem statement",
+      "solution": "TODO: Solution description",
+      "process": {
+        "research": "TODO: Research phase description",
+        "ideation": "TODO: Ideation phase description",
+        "design": "TODO: Design phase description",
+        "testing": "TODO: Testing/validation phase description"
+      },
+      "outcomes": {
+        "metrics": [],
+        "impact": "TODO: Describe impact"
+      },
+      "images": [],
+      "tags": []
+    }
+  ],
+  "navigation": [
+    { "label": "Work", "href": "/work" },
+    { "label": "About", "href": "/about" },
+    { "label": "Experience", "href": "/experience" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "footer": {
+    "copyright": "Marquise Fleming",
+    "links": [
+      { "label": "LinkedIn", "href": "https://www.linkedin.com/in/marquise-fleming/" },
+      { "label": "Behance", "href": "https://www.behance.net/marquisefl53ff" }
+    ]
+  }
+}

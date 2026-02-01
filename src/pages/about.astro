@@ -1,0 +1,371 @@
+---
+/**
+ * About Page
+ *
+ * Personal brand page showcasing background, philosophy, and approach.
+ *
+ * NOTE: Bio content requires user input.
+ * TODO placeholders indicate where actual content should be added.
+ */
+
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Button from "../components/Button.astro";
+import { siteData } from "../content/site-data";
+
+const title = "About | Marquise Fleming";
+const description = "Learn more about Marquise Fleming, a UI/UX Designer based in Atlanta.";
+---
+
+<BaseLayout title={title} description={description}>
+  <section class="about-page">
+    <div class="container">
+      <!-- Header -->
+      <header class="page-header">
+        <span class="page-label animate-fade-in">About</span>
+        <h1 class="page-title animate-fade-in stagger-1">
+          Designing with purpose,<br />
+          creating with intention.
+        </h1>
+      </header>
+
+      <!-- Main Content Grid -->
+      <div class="about-grid">
+        <!-- Image Column -->
+        <div class="about-image animate-fade-in stagger-2">
+          <div class="image-wrapper">
+            <!-- TODO: Replace with actual headshot -->
+            <div class="image-placeholder">
+              <span class="placeholder-initial">{siteData.profile.name.charAt(0)}</span>
+            </div>
+          </div>
+          <div class="image-caption">
+            <span class="location">{siteData.profile.location}</span>
+          </div>
+        </div>
+
+        <!-- Content Column -->
+        <div class="about-content animate-fade-in stagger-3">
+          <div class="intro">
+            <p class="intro-text">
+              I'm {siteData.profile.name}, a {siteData.profile.title} currently
+              at {siteData.profile.currentCompany}.
+            </p>
+          </div>
+
+          <div class="bio">
+            <!-- TODO: Replace with actual bio content -->
+            <p>
+              With experience across diverse industries including technology,
+              beverages, and enterprise solutions, I bring a unique perspective
+              to every design challenge.
+            </p>
+            <p>
+              My journey has taken me through companies like Y Media Labs,
+              Province Brands of Canada, and The Creative Momentum, where I've
+              honed my craft in creating user-centered digital experiences.
+            </p>
+            <p>
+              I believe in the power of thoughtful design to solve complex problems
+              and create meaningful connections between users and products.
+            </p>
+            <p class="todo-note">
+              <em>TODO: Add personal bio with design philosophy and approach.</em>
+            </p>
+          </div>
+
+          <div class="cta">
+            <Button href="/contact" variant="primary">
+              Get in Touch
+            </Button>
+            <Button href="/work" variant="outline">
+              View Work
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Philosophy Section -->
+      <section class="philosophy-section">
+        <div class="section-header">
+          <span class="section-label">Philosophy</span>
+          <h2 class="section-title">How I Approach Design</h2>
+        </div>
+
+        <div class="philosophy-grid">
+          <div class="philosophy-item">
+            <span class="philosophy-number">01</span>
+            <h3 class="philosophy-title">User-Centered</h3>
+            <p class="philosophy-text">
+              Every design decision starts with understanding the people who will
+              use the product. Research and empathy drive my process.
+            </p>
+          </div>
+
+          <div class="philosophy-item">
+            <span class="philosophy-number">02</span>
+            <h3 class="philosophy-title">Purpose-Driven</h3>
+            <p class="philosophy-text">
+              Design without purpose is decoration. I focus on solving real problems
+              and creating measurable impact.
+            </p>
+          </div>
+
+          <div class="philosophy-item">
+            <span class="philosophy-number">03</span>
+            <h3 class="philosophy-title">Collaborative</h3>
+            <p class="philosophy-text">
+              Great design emerges from great collaboration. I work closely with
+              stakeholders, developers, and users throughout the process.
+            </p>
+          </div>
+
+          <div class="philosophy-item">
+            <span class="philosophy-number">04</span>
+            <h3 class="philosophy-title">Iterative</h3>
+            <p class="philosophy-text">
+              Design is never finished. I embrace feedback, testing, and continuous
+              improvement to refine and perfect solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Preview -->
+      <section class="experience-preview">
+        <div class="section-header">
+          <span class="section-label">Experience</span>
+          <h2 class="section-title">Where I've Worked</h2>
+        </div>
+
+        <ul class="company-list">
+          {siteData.workHistory.slice(0, 4).map((job) => (
+            <li class="company-item">
+              <span class="company-name">{job.company}</span>
+              <span class="company-role">{job.role}</span>
+            </li>
+          ))}
+        </ul>
+
+        <Button href="/experience" variant="outline">
+          View Full Experience
+          <span>&rarr;</span>
+        </Button>
+      </section>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .about-page {
+    padding-top: 120px;
+    padding-bottom: var(--space-32);
+  }
+
+  /* Header */
+  .page-header {
+    margin-bottom: var(--space-20);
+    max-width: 800px;
+  }
+
+  .page-label {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-gray-500);
+    margin-bottom: var(--space-4);
+  }
+
+  .page-title {
+    font-size: var(--text-4xl);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  @media (min-width: 768px) {
+    .page-title {
+      font-size: var(--text-5xl);
+    }
+  }
+
+  /* About Grid */
+  .about-grid {
+    display: grid;
+    gap: var(--space-16);
+    margin-bottom: var(--space-32);
+  }
+
+  @media (min-width: 1024px) {
+    .about-grid {
+      grid-template-columns: 1fr 1.5fr;
+      gap: var(--space-20);
+      align-items: start;
+    }
+  }
+
+  /* Image */
+  .about-image {
+    position: sticky;
+    top: 100px;
+  }
+
+  .image-wrapper {
+    margin-bottom: var(--space-4);
+  }
+
+  .image-placeholder {
+    aspect-ratio: 4 / 5;
+    background-color: var(--color-gray-100);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-initial {
+    font-size: var(--text-6xl);
+    font-weight: var(--font-light);
+    color: var(--color-gray-300);
+  }
+
+  .image-caption {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+  }
+
+  /* Content */
+  .about-content {
+    max-width: 600px;
+  }
+
+  .intro {
+    margin-bottom: var(--space-8);
+  }
+
+  .intro-text {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-light);
+    line-height: var(--leading-snug);
+  }
+
+  .bio {
+    margin-bottom: var(--space-10);
+  }
+
+  .bio p {
+    font-size: var(--text-lg);
+    color: var(--color-gray-600);
+    line-height: var(--leading-relaxed);
+  }
+
+  .todo-note {
+    font-size: var(--text-sm);
+    color: var(--color-gray-400);
+    padding: var(--space-4);
+    background-color: var(--color-gray-50);
+    border-left: 2px solid var(--color-gray-300);
+  }
+
+  .cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+  }
+
+  /* Philosophy */
+  .philosophy-section {
+    padding: var(--space-24) 0;
+    border-top: 1px solid var(--color-gray-100);
+    margin-bottom: var(--space-24);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-16);
+  }
+
+  .section-label {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: var(--font-medium);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-widest);
+    color: var(--color-gray-500);
+    margin-bottom: var(--space-4);
+  }
+
+  .section-title {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-medium);
+    line-height: var(--leading-tight);
+  }
+
+  .philosophy-grid {
+    display: grid;
+    gap: var(--space-12);
+  }
+
+  @media (min-width: 768px) {
+    .philosophy-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-10);
+    }
+  }
+
+  .philosophy-item {
+    padding: var(--space-8);
+    background-color: var(--color-gray-50);
+  }
+
+  .philosophy-number {
+    display: block;
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    color: var(--color-gray-400);
+    margin-bottom: var(--space-4);
+  }
+
+  .philosophy-title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--space-3);
+  }
+
+  .philosophy-text {
+    font-size: var(--text-base);
+    color: var(--color-gray-600);
+    line-height: var(--leading-relaxed);
+    margin-bottom: 0;
+  }
+
+  /* Experience Preview */
+  .experience-preview {
+    padding-top: var(--space-24);
+    border-top: 1px solid var(--color-gray-100);
+  }
+
+  .company-list {
+    list-style: none;
+    margin-bottom: var(--space-10);
+  }
+
+  .company-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-6) 0;
+    border-bottom: 1px solid var(--color-gray-100);
+  }
+
+  .company-name {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+  }
+
+  .company-role {
+    font-size: var(--text-sm);
+    color: var(--color-gray-500);
+  }
+</style>

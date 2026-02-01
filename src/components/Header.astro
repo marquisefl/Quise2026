@@ -1,0 +1,212 @@
+---
+/**
+ * Header Component
+ *
+ * Site navigation with responsive mobile menu.
+ * Minimal, editorial design with strong typography.
+ */
+
+import { siteData } from "../content/site-data";
+
+const { pathname } = Astro.url;
+---
+
+<header class="header">
+  <nav class="nav container" aria-label="Main navigation">
+    <a href="/" class="logo" aria-label="Marquise Fleming - Home">
+      <span class="logo-text">{siteData.profile.name}</span>
+    </a>
+
+    <button
+      class="mobile-toggle"
+      aria-expanded="false"
+      aria-controls="nav-menu"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="hamburger">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </span>
+    </button>
+
+    <ul id="nav-menu" class="nav-menu" role="menubar">
+      {siteData.navigation.map((item) => (
+        <li role="none">
+          <a
+            href={item.href}
+            class:list={["nav-link", { active: pathname === item.href || pathname.startsWith(item.href + "/") }]}
+            role="menuitem"
+          >
+            {item.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-gray-100);
+  }
+
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 72px;
+  }
+
+  .logo {
+    position: relative;
+    z-index: 1;
+  }
+
+  .logo-text {
+    font-size: var(--text-lg);
+    font-weight: var(--font-medium);
+    letter-spacing: var(--tracking-tight);
+  }
+
+  .logo:hover {
+    opacity: 1;
+  }
+
+  .logo:hover .logo-text {
+    opacity: 0.6;
+  }
+
+  .mobile-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (min-width: 768px) {
+    .mobile-toggle {
+      display: none;
+    }
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 24px;
+  }
+
+  .hamburger-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-black);
+    transition: transform var(--transition-base), opacity var(--transition-base);
+  }
+
+  .mobile-toggle[aria-expanded="true"] .hamburger-line:first-child {
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  .mobile-toggle[aria-expanded="true"] .hamburger-line:last-child {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+
+  .nav-menu {
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-white);
+    padding: 120px var(--space-6) var(--space-12);
+    gap: var(--space-8);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  @media (min-width: 768px) {
+    .nav-menu {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      padding: 0;
+      gap: var(--space-10);
+      background: none;
+    }
+  }
+
+  .nav-link {
+    font-size: var(--text-3xl);
+    font-weight: var(--font-light);
+    letter-spacing: var(--tracking-tight);
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .nav-link {
+      font-size: var(--text-sm);
+      font-weight: var(--font-normal);
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-wider);
+    }
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-black);
+    transition: width var(--transition-base);
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  .nav-link:hover {
+    opacity: 1;
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector(".mobile-toggle");
+  const menu = document.querySelector(".nav-menu");
+
+  toggle?.addEventListener("click", () => {
+    const isExpanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!isExpanded));
+    menu?.classList.toggle("open");
+    document.body.style.overflow = isExpanded ? "" : "hidden";
+  });
+
+  // Close menu on link click
+  menu?.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      toggle?.setAttribute("aria-expanded", "false");
+      menu.classList.remove("open");
+      document.body.style.overflow = "";
+    });
+  });
+</script>
