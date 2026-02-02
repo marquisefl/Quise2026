@@ -1,0 +1,73 @@
+HOMEPAGE - https://marquisefleming.com/
+================================================================================
+
+NAVIGATION
+----------
+- quise (logo/home)
+- Work
+- Contact
+- LinkedIn
+
+[BACKGROUND IMAGE: bg_14_rR6HYXBrMmX4cRpXfXUOvpvpB0.png]
+[BACKGROUND IMAGE: bg_15_6mcf62RlDfRfU61Yg5vb2pefpi4.png]
+
+HERO SECTION
+------------
+Welcome to my world!
+
+Lead Product Designer, Who Loves To Innovate
+
+With 8+ years of experience, I love solving complex problems through design ideation and prototyping to create impactful, user-centered solutions.
+
+[VIDEO/ANIMATION ELEMENT - represented by image_10_BFvXCXIwf9cniGD7QnhH67IUw.png]
+
+COMPANY LOGOS SECTION
+---------------------
+[LOGO IMAGE: image_01_zfBMOwq0gX8Tazkq2qMGZoAMIio.png - Apple logo]
+[LOGO IMAGE: image_02_rU09kWb0x6QPKdSY811oXQuiPKM.png - Google logo]
+[LOGO IMAGE: image_03_qHv0rwW0rGCOkNzNiGCaWnl5RLg.png - Company logo]
+[LOGO IMAGE: image_04_geFuXKNSTW46tiJIFz7FaO1xAQ.png - Albertsons logo]
+[LOGO IMAGE: image_05_Kp5XZcQ8AQFMENYtIQSWda6OFs.png - Company logo]
+[LOGO IMAGE: image_06_BANPvxYxFQp091DGrICWUOrs6dk.png - Company logo]
+[LOGO IMAGE: image_07_G4IDrovQ3UpQ9nsP39ict3bzoy4.png - Company logo]
+[LOGO IMAGE: image_08_2UorEmnX2k4uSEd3eTBLrWexULE.png - Company logo]
+[LOGO IMAGE: image_09_z6ShQad4ZKBmDuJu1gX8GgWiqoo.png - Company logo]
+
+ABOUT
+-----
+I believe that building exceptional experiences begins with understanding my users at a fundamental level. Through empathy and meticulous research, I uncover their motivations, challenges, and aspirations, allowing me to craft designs that resonate deeply and solve real problems.
+
+CASE STUDIES
+------------
+
+1. Kaiser Permanente
+   Becoming Americas most trusted medical brand.
+   [View case]
+   
+   [CASE STUDY IMAGE: image_11_9BJAseVAPp5Iwz7fxw2rm5QNh8.png - Kaiser Permanente app screens]
+
+2. Twitter Health
+   Rethink how the Twitter community interacts with Twitter Health and how it supports them.
+   [View case]
+   
+   [CASE STUDY IMAGE: image_12_ZmdIpDaqkJFCyrTAYRCUhzHmsk.png - Twitter Health hero image]
+
+3. Elevate
+   Delivering tailored financial solutions for non-prime users.
+   [View case]
+   
+   [CASE STUDY IMAGE: image_13_zJ7LkkocZymNL524hOxW7vqchg.png - Elevate app screens]
+
+4. Under Armour
+   Delivering tailored financial solutions for non-prime users.
+   [View case]
+   
+   [NOTE: Under Armour case study preview image appears to share the same visual as Elevate]
+
+CONTACT SECTION
+---------------
+Contact form with fields:
+- First & Last Name
+- Email (jane@framer.com)
+- Your message...
+- Submit button

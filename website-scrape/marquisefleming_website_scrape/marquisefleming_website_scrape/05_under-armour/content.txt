@@ -1,0 +1,90 @@
+UNDER ARMOUR CASE STUDY - https://marquisefleming.com/under-armour
+================================================================================
+
+TITLE
+-----
+Under Armour
+Reimagined the athletic shopping experience with bold, dynamic, and competitive design solutions.
+
+PROJECT DETAILS
+---------------
+Client: Under Armour
+Services: Visual Design, UI & UX Design
+Industries: E-commerce
+Date: August 2022
+
+[HERO IMAGE: image_01_zJ7LkkocZymNL524hOxW7vqchg.png - Under Armour mobile app screens showcase]
+
+OVERVIEW
+--------
+Under Armour partnered with YML to redesign and reimagine their online shopping experience, aligning it with their bold and athletic brand identity. The collaboration aimed to create a seamless, user-centric interface that embodied the energy and competitive spirit of the Under Armour brand. Together, we focused on enhancing the customer journey by integrating modern design elements and intuitive functionality. This partnership helped position Under Armour to compete more effectively with top industry players while delivering an elevated digital experience.
+
+01 - DISCOVERY
+--------------
+Knowledge Learning:
+During the discovery phase, we uncovered key insights that shaped our approach to the redesign. Users felt that Under Armour's existing digital experience was outdated and lacked the advanced features offered by other leading athletic brands, such as personalized recommendations and robust community engagement tools. Stakeholders emphasized the need for a design that not only showcased athletic performance but also highlighted lifestyle elements to resonate with a broader audience. Additionally, there was a strong desire to create a sense of community within the platform, fostering connections among customers and aligning with the brand's commitment to empowering athletes at every level. These findings laid the foundation for a user-centered, modern redesign.
+
+[DESIGN ELEMENT: image_02_GM8PF9va0znuvffFAjw9XarZg98.png]
+
+02 - RESEARCH
+-------------
+Asking the right people the right questions:
+To inform the redesign, we conducted in-depth interviews with both consumers and stakeholders, uncovering valuable perspectives that shaped our approach. Consumers expressed a strong desire for an immersive shopping experience that combines engaging visuals with intuitive features, making the platform seamless and enjoyable to navigate. Stakeholders emphasized the importance of integrating lifestyle-driven elements into the design, aiming to align the shopping experience with consumers' daily routines and inspire more frequent purchases. Additionally, we ran a competitive analysis on the top three leaders in the athletic industry, identifying key features and design strategies that set them apart. These insights guided our efforts to craft a user experience that not only meets but exceeds current industry standards.
+
+Research Metrics:
+- 7 User Interviews
+- 3 Competitors Audited
+- 4 Stakeholder Interviews
+- 3 Data points analyzed
+
+03 - INSIGHTS & OPPORTUNITIES
+------------------------------
+Synthesis:
+After multiple client workshops and alignment sessions with our internal team, it became clear where we needed to focus our attention heading into design.
+
+Key Insights:
+- Consumers Crave Immersion and Ease of Use
+- Lifestyle Integration Drives Engagement
+- Competitors Set High Expectations
+- Community is a Key Opportunity
+
+04 - STARTING FRESH
+-------------------
+Design System:
+We explored a bold design language that seamlessly blended athleticism with lifestyle elements, creating a dynamic and visually engaging experience. This approach emphasized Under Armour's energetic brand identity while showcasing how their products integrate into both performance and everyday life.
+
+[DESIGN SYSTEM IMAGE: image_03_0Y43LGVhvupa9xfGXRSE1gSeMdQ.png - Design system exploration 1]
+[DESIGN SYSTEM IMAGE: image_04_9BZRqLWDcsHqD0APiAQbMZ8GSM.png - Design system exploration 2]
+[DESIGN SYSTEM IMAGE: image_05_IxvES9bjyE05zHLLbeFgdfkFgQ.png - Design system exploration 3]
+
+Elevation:
+We aimed to explore innovative ways to highlight key pieces within each collection, ensuring they captured the user's attention. By incorporating bold visuals and strategic layouts, we brought focus to standout items, making them irresistible focal points. On the collection pages, we amplified this approach by designing elements that made these items pop even more, creating a sense of exclusivity and allure. This intentional emphasis encouraged users to engage deeply with the collections and feel naturally drawn to explore and purchase.
+
+06 - DESIGN
+-----------
+We listened:
+We explored a variety of design languages to create a clear and intuitive experience that helps users easily understand how we plan to address their debt and achieve their financial goals. By prioritizing simplicity and clarity, we ensured the design communicated actionable solutions tailored to their unique needs.
+
+[DESIGN IMAGE: image_06_4PCdAdKC65wnPvxJAsXBhSPWKRk.png - Final design showcase]
+
+07 - WHERE WE LANDED
+--------------------
+Our Approach:
+We explored a variety of design languages to create a clear and intuitive experience that helps users easily understand how we plan to address their debt and achieve their financial goals. By prioritizing simplicity and clarity, we ensured the design communicated actionable solutions tailored to their unique needs.
+
+[FINAL DESIGN IMAGE: image_07_rNzR6na8ezgT7WgjecDFym9p3Pk.png - Complete design solution]
+
+09 - REFLECTION
+---------------
+What we learned:
+- Simplifying Complexity is a Powerful Skill
+- Empathy Drives Design
+- Collaboration is Key to Innovation
+
+FOOTER
+------
+We specialize in crafting exceptional digital experiences to help our clients achieve their business goals.
+
+Links: Get for Free, Work, Studio, Contact, Twitter, Dribbble, Instagram
+
+Credits: Framer template crafted with love by Dawid Pietrasiak

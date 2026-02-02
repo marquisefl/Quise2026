@@ -1,0 +1,79 @@
+KAISER PERMANENTE CASE STUDY - https://marquisefleming.com/kaiser-permanente
+================================================================================
+
+TITLE
+-----
+Kaiser Permanente
+Becoming one of America's most trusted medical brand
+
+PROJECT DETAILS
+---------------
+Client: Kaiser Permanente
+Services: User Experience and Interface Design
+Industries: Medical
+Date: June 2022
+
+[HERO IMAGE: image_01_BFvXCXIwf9cniGD7QnhH67IUw.png - Video/animation thumbnail]
+[HERO IMAGE: image_02_ly2Yc4eLnYyYFL0iN8ajzh8LGQc.png - Kaiser Permanente app screens showcase]
+
+01 - DISCOVERY
+--------------
+About:
+Kaiser Permanente partnered with YML to craft a vision for a unified experience that will boost brand awareness, and influence digital-first, health content seekers to return to KP.org as their trusted source of health content, ultimately increasing membership. Internally, our goal was even loftier: Help KP become one of America's trusted brands. As one of three designers on this project, I collaborated daily with KP design leadership and strategists, conducted and synthesized research, defined a new visual language and delivered prototypes, a digital playbook and a UI kit. Our recommendations are expected to be rolled out gradually over the next few years.
+
+02 - RESEARCH
+-------------
+Knowledge Learning:
+During our discovery, I collaborated closely with a KP researcher, a content strategist and our product manager. I wanted to understand our users' goals and desired outcomes, their content preferences, and how they currently engage with competitor sites and best-in-class content destinations.
+
+[RESEARCH METRICS IMAGE: image_03_vUt5Pj6PLbO4WBMHJ9jzqKAvTk.png - Research statistics visualization]
+
+Research Metrics:
+- 12 User Interviews
+- 2 User Group Types
+- 9 Stakeholder Interviews
+- 6 Competitors Audited
+
+COVID-19 Impact:
+During our research, we also examined the unique challenges presented by COVID-19. Remote interviews and surveys revealed a growing reliance on digital healthcare solutions, but we discovered a critical gap in how users accessed telehealth services and fulfilled prescriptions online. Many members found the experience fragmented—navigating between separate platforms for appointments, medication refills, and follow-ups. These insights highlighted an urgent need to design more seamless, integrated digital touchpoints that could support members' healthcare journeys end-to-end.
+
+THE CHALLENGE
+-------------
+"We faced the challenge of redesigning an outdated, complex design system into a calming and inviting experience that could adapt across different regions without relying on red. At the same time, we needed to ensure users could seamlessly connect with doctors, refill prescriptions, and track their medication fulfillment in one integrated platform."
+
+04 - OUR APPROACH
+-----------------
+Human-centered
+
+05 - PERSPECTIVE
+----------------
+Community:
+This design style fosters community by creating a unified, accessible experience that connects members to care and to each other.
+
+Inviting:
+The calming visuals and approachable interface make healthcare feel more welcoming and less intimidating for Kaiser members.
+
+Reassuring:
+By providing clarity, consistency, and ease of use, the design style reassures members that their health needs are supported with trust and reliability.
+
+06 - DESIGN SHOWCASE
+--------------------
+[DESIGN IMAGE: image_04_j0ZqgFl2cu7bUIGmYrIkAqAqHs.png - App interface screens]
+[DESIGN IMAGE: image_05_vwgaxgCaLMPTjbi5jAdExdrwZE.png - Design system components]
+[DESIGN IMAGE: image_06_Ad468ejSZ43g2Jlq05FrhRApVN0.png - Mobile app screens]
+[DESIGN IMAGE: image_07_aMyO2SIVvkfVJjHfwBpxl4HNus.png - User interface examples]
+[DESIGN IMAGE: image_08_9laAN7NB8qfEWZ7DiESrTphao7I.png - Final design showcase]
+[DESIGN IMAGE: image_09_GM8PF9va0znuvffFAjw9XarZg98.png - Additional design element]
+
+07 - REFLECTION
+---------------
+What we learned:
+- Trust is Built Through Transparency and Consistency
+- Empathy is Key to Shaping User Perceptions
+- A Unified Identity Drives Engagement and Recognition
+
+FOOTER
+------
+I specialize in crafting exceptional digital experiences to help my clients achieve their business goals.
+
+Links: LinkedIn, Work, Studio, Contact, Twitter, Dribbble, Instagram

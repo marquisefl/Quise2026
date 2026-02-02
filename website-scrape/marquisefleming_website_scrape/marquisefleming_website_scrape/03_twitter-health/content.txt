@@ -1,0 +1,138 @@
+TWITTER HEALTH CASE STUDY - https://marquisefleming.com/twitter-health
+================================================================================
+
+TITLE
+-----
+Twitter Health
+Rethink how the Twitter community interacts with Twitter Health and how it supports them.
+
+PROJECT DETAILS
+---------------
+Client: Twitter
+Services: User Experience and Interface Design
+Industries: Social Media
+Date: June 2022
+
+[HERO IMAGE: image_01_9kL1pn84OycDYD6ZHX3Ev6DIE.png - Twitter Health hero image with person]
+
+01 - DISCOVERY
+--------------
+Knowledge Learning:
+During discovery with Twitter stakeholders, we gained critical insights into their commitment to fostering a safe and healthy platform for public discourse. Stakeholders emphasized the need for transparency, user trust, and proactive measures to address safety concerns. We learned about their desire to create tools and processes that empower both users and employees to mitigate risks and promote healthier interactions. Collaboration revealed the importance of balancing swift responses to crises with long-term cultural and systemic improvements. These insights shaped our design direction, ensuring alignment with Twitter's vision and stakeholder priorities.
+
+02 - RESEARCH
+-------------
+Knowledge Learning:
+During our research phase, we discovered a recurring theme among diverse user groups: many people did not feel safe on Twitter. We conducted interviews and focus groups with a broad range of communities, including LGBTQ individuals, Black people, White people, Middle-class families, low-income users, affluent individuals in the 1%, Christians, Catholics, Asians, Americans, Jewish people, and others. Across the board, participants expressed concerns about harassment, misinformation, and a lack of protection from harmful interactions. This highlighted a significant gap between the platform's intent to foster open dialogue and users' experiences of safety. It became clear that safety and trust are not universal concepts—they are deeply personal and shaped by individual identities and experiences.
+
+[RESEARCH METRICS IMAGE: image_02_d29t8ayKLEefJ5I1rp1HUJmDIk.png - Research statistics]
+
+Research Metrics:
+- 25 User Interviews
+- 30+ User Group Types
+- 5 Stakeholder Interviews
+- 100 Data points analyzed
+
+Key Finding:
+One of the most striking findings was the sense of isolation many users felt. Participants expressed a desire for tailored support groups or spaces where their unique challenges and concerns could be addressed in a more focused and affirming way. For example, LGBTQ users sought stronger moderation against homophobic content, while religious groups requested safeguards against faith-based attacks. These insights underscored the importance of creating not just universal safety measures but also targeted initiatives that resonate with different communities. This need for community-specific support informed our approach, ensuring that safety solutions would empower users to connect while feeling seen, heard, and protected.
+
+THE CHALLENGE
+-------------
+"How do we define 'Health' — how do we talk about it and how do we deliver it in a way that builds trust and helps improve perceptions."
+
+03 - INSIGHTS & OPPORTUNITIES
+------------------------------
+[INSIGHTS IMAGE: image_03_oMfjie3rnXDnflTUPQOnzjrkU.png - Insights visualization]
+[DESIGN ELEMENT: image_04_GM8PF9va0znuvffFAjw9XarZg98.png]
+
+Key Insights:
+- Users feel unsafe engaging in public conversations.
+- Diverse communities want tailored support to address unique challenges.
+- There's a lack of transparency in how safety tools work.
+- People want more control over their online experience.
+
+04 - OUR APPROACH
+-----------------
+Empathetic, Human, Transparent
+
+"We are committed to building a safer Twitter community for everyone. Thank you for taking action and helping us keep this space welcoming for all. Reporting harmful content is crucial, and we're here to support you in making Twitter a better place. Our team is actively working to address violations and will keep you informed with real-time updates."
+
+How we create the culture:
+
+Community:
+How the Twitter community experiences the platform and is supported by Twitter Health in unsafe moments.
+
+Stakeholders:
+How third parties including partners, press, government, and investors understand our efforts keep our communities and products safe and healthy.
+
+Company:
+How Twitter as a company communicates and influences its employees to build safe tools and products to serve public conversation.
+
+06 - USER PERSONAS
+------------------
+[PERSONA IMAGE: image_05_WJYeZm6n44R19PENvtJkT0z0w.png - User personas]
+[PERSONA IMAGE: image_06_joZZFQpSTHYgUNlpstmyDSoWPS8.png - User persona card 1]
+[PERSONA IMAGE: image_07_sfbIebOghGUXnYQQgnQ8iSucac.png - User persona card 2]
+[PERSONA IMAGE: image_08_MzA8Tm43spFjKVUBfvdllHaGlw.png - User persona card 3]
+
+07 - DEFINING A DESIGN LANGUAGE
+--------------------------------
+Supportive:
+Twitter faced a significant challenge in creating a cohesive brand identity around "Twitter Health." The initiative aimed to position the platform as a safe and inclusive digital space, emphasizing its commitment to cracking down on hate speech and disruptive behaviors. However, the lack of a clear narrative and visual identity left users and stakeholders questioning the platform's efforts. This project focused on establishing Twitter Health as a recognizable and trustworthy movement, demonstrating the company's dedication to fostering healthy, meaningful interactions online.
+
+#HandsOn - Supportive, Caring, Fair:
+[DESIGN LANGUAGE IMAGE: image_09_UUElAuXvn6y1Lla5NVMSlSA1HOY.png - Hands design concept]
+[DESIGN LANGUAGE IMAGE: image_10_4wB4Kp8uUp0QhIeFJ02IZBZhY5g.png - Hand gesture 1]
+[DESIGN LANGUAGE IMAGE: image_11_eMJnEeMjWsYrVkiHfAsLwUp2Ro.png - Hand gesture 2]
+
+Hands are the channel that words flow through to get to Twitter. They're an expressive way to show support, draw boundaries, provide an interruption, or offer help. They are universal and unbiased. They will be used as an illustrated element to show emphasis when needed.
+
+Supportive:
+We speak to our community with warmth, empathy and understanding—like a person, not an algorithm. This means you can expect a reassuring and informative response from us.
+
+Fair:
+We consider both sides of an interaction and communicate expectations proactively.
+
+#StrengthInNumbers - Empathetic, Bold, Communal:
+[DESIGN LANGUAGE IMAGE: image_12_BgbbbquzjAKX10dIXZJBkQ8VIII.png - Community photography style]
+[DESIGN LANGUAGE IMAGE: image_13_RrMfooarElMEK5DXCCgkAclOqHs.png - Statistics visualization 1]
+[DESIGN LANGUAGE IMAGE: image_14_s4kVA5yRPuMTGfwZ4kaTucUneU.png - Statistics visualization 2]
+
+Community and togetherness are emphasized in a modern photography style with a gentle blue gradient. The people in the photos are interacting and engaged with one another. Any statistics are shown in large type accompanied by copy that is easily understandable, human and empathetic.
+
+Bold:
+We speak to our community with warmth, empathy and understanding—like a person, not an algorithm. This means you can expect a reassuring and informative response from us.
+
+Communal:
+We consider both sides of an interaction and communicate expectations proactively.
+
+07 - WHERE WE LANDED
+--------------------
+Arbiter:
+We developed a design style that set a tone of warmth and fairness, striking the balance between kindness and authority. By adopting a straightforward yet approachable aesthetic, we positioned Twitter Health as a strong, neutral decision-maker. This style conveyed unbiased consideration while fostering trust and encouraging users to respect the rules of engagement.
+
+[FINAL DESIGN IMAGE: image_15_R9n5RMQfXM176LVvfuBS6y5sw.png - Final design showcase]
+[FINAL DESIGN IMAGE: image_16_b0GLR9gr3a2EVklIL1D0nlewG0.png - Design application 1]
+[FINAL DESIGN IMAGE: image_17_sg4qwCxzpsKAwem0NfAlrqXVfw.png - Design application 2]
+
+#Arbiter - Empathetic, Bold, Communal:
+When users see Twitter as a fair and neutral decision-maker, they're more likely to respect the rules of engagement. We'll use language that is kind, but that stays above the fray. And a straightforward tone that projects strong, independent, unbiased consideration.
+
+Informed:
+Our language conveys knowledge, certainty, and trustworthiness. We communicate clear stances on our policies, and we use our platform to uphold and reinforce the standards of the community.
+
+Kind:
+With concern for every user in mind, we provide ways of quietly stepping away from situations that may feel physically or psychologically unsafe, allowing breathing room away from those interactions.
+
+09 - REFLECTION
+---------------
+What we learned:
+- Trust is Built Through Transparency and Consistency
+- Empathy is Key to Shaping User Perceptions
+- A Unified Identity Drives Engagement and Recognition
+
+FOOTER
+------
+I specialize in crafting exceptional digital experiences to help my clients achieve their business goals.
+
+Links: LinkedIn, Work, Studio, Contact, Twitter, Dribbble, Instagram

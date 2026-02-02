@@ -1,0 +1,105 @@
+ELEVATE CASE STUDY - https://marquisefleming.com/elevate
+================================================================================
+
+TITLE
+-----
+Elevate
+Delivering tailored financial solutions for non-prime users.
+
+PROJECT DETAILS
+---------------
+Client: Elevate
+Services: Visual Design, UI & UX Design
+Industries: Financial
+Date: August 2022
+
+[HERO IMAGE: image_01_D18ORAtZcr6cAJ88FKgM3HjAmns.png - Elevate branding with hot air balloons]
+
+01 - DISCOVERY
+--------------
+Knowledge Learning:
+During the discovery phase, we explored Elevate's vision to create a financial savings plan that empowers users to pay down debt effectively. This innovative experience would enable users to connect their bank accounts and upload their credit reports, providing a holistic view of their financial situation. With these insights, users could select personalized plans tailored to their unique needs and goals.
+
+02 - RESEARCH
+-------------
+Asking the right people the right questions:
+In the research phase, we conducted in-depth interviews with both users and stakeholders to gain a comprehensive understanding of their needs and expectations. We also analyzed Elevate's competitors, performing a detailed competitive analysis to identify opportunities for differentiation. Through this process, we discovered how Elevate's in-person meetings with users play a crucial role in fulfilling their financial journey. These insights allowed us to align our design strategy with Elevate's mission to create impactful, user-centered solutions.
+
+[RESEARCH IMAGE: image_02_MOtXu98G5XeTFg1yBn9JQ2Wt18.png - Research findings]
+
+Research Metrics:
+- 12 User Interviews
+- 4 Competitors Audited
+- 8 Stakeholder Interviews
+- 100 Data points analyzed
+
+03 - INSIGHTS & OPPORTUNITIES
+------------------------------
+Synthesis:
+After multiple client workshops and alignment sessions with our internal team, it became clear where we needed to focus our attention heading into design.
+
+[INSIGHTS IMAGE: image_03_tHY4g1UoP3kn0kk2G3G5dbKhvHE.png - Key insights]
+[DESIGN ELEMENT: image_04_GM8PF9va0znuvffFAjw9XarZg98.png]
+
+Key Insights:
+- Users Feel Overwhelmed by the Complexity of Their Financial Situation
+- There's a Strong Desire for Tailored Guidance
+- Small Wins Motivate Users to Stay Committed
+
+04 - USERS STARTING POINT
+--------------------------
+Sign Up Flow:
+In the first step of defining our user flow, we designed a tailored sign-up experience that gathered key insights about our users. By understanding their specific financial needs and challenges, we were able to recommend personalized solutions that aligned with their goals. This approach ensured that each user received the most relevant tools and resources to support their journey toward financial stability.
+
+05 - LISTENING & IMPLEMENTING
+------------------------------
+Knowledge Learning:
+We carefully listened to these user insights and used them as the foundation for brainstorming solutions that directly address their needs. By focusing on their challenges, motivations, and emotional barriers, we developed strategies to simplify complex processes, provide personalized guidance, and deliver small wins that keep users motivated. This collaborative approach ensured that our solutions were not only practical but also empathetic to the unique struggles users face.
+
+Synthesizing the Data to Create Financial Plans:
+
+[FINANCIAL PLANS IMAGE: image_05_NK1AA8hLq9nF7s5qiqkpXrXEo.png - Snowball and Avalanche methods]
+
+Snowball Plan:
+The Snowball method prioritizes tackling your smallest debts first, progressing to larger ones over time. This approach allows you to see quick wins as you pay off accounts, though it may result in higher overall interest costs.
+
+Avalanche Plan:
+The Snowball method prioritizes tackling your smallest debts first, progressing to larger ones over time. This approach allows you to see quick wins as you pay off accounts, though it may result in higher overall interest costs.
+
+06 - COMMUNICATING THROUGH DESIGN
+----------------------------------
+We listened:
+We explored a variety of design languages to create a clear and intuitive experience that helps users easily understand how we plan to address their debt and achieve their financial goals. By prioritizing simplicity and clarity, we ensured the design communicated actionable solutions tailored to their unique needs.
+
+[DESIGN EXPLORATION IMAGE: image_06_o0zKJe9Iav1trPAOMF4K4TV550.png - Design concepts]
+
+07 - WHERE WE LANDED
+--------------------
+Our Approach:
+We explored a variety of design languages to create a clear and intuitive experience that helps users easily understand how we plan to address their debt and achieve their financial goals. By prioritizing simplicity and clarity, we ensured the design communicated actionable solutions tailored to their unique needs.
+
+[FINAL DESIGN IMAGE: image_07_iBYtTKAa44PxzgehAjB4tfR9FaM.png - App interface screens]
+[FINAL DESIGN IMAGE: image_08_F117V2Vxvrd6y0BetyPKd7mK0.png - Mobile app designs]
+[FINAL DESIGN IMAGE: image_09_psJJ7ikeBhRWATsYBAQPWOhDlQI.png - Dashboard views]
+
+08 - YOUR GUIDE TO BUILDING A STRONGER SCORE
+---------------------------------------------
+Credit Building:
+Experience designed to empower users with actionable insights to improve their credit scores. We crafted this program to not only educate users on effective credit-building strategies but also to celebrate their accomplishments along the way. Each milestone reached is met with personalized rewards and recognition, keeping users motivated on their journey. By combining guidance with encouragement, Credit Boost makes the path to financial wellness both achievable and rewarding.
+
+[CREDIT BUILDING IMAGE: image_10_KImYDEUemaE8D0jr67kH2xUCTk.png - Credit boost feature]
+
+09 - REFLECTION
+---------------
+What we learned:
+- Simplifying Complexity is a Powerful Skill
+- Empathy Drives Design
+- Collaboration is Key to Innovation
+
+FOOTER
+------
+We specialize in crafting exceptional digital experiences to help our clients achieve their business goals.
+
+Links: Get for Free, Work, Studio, Contact, Twitter, Dribbble, Instagram
+
+Credits: Framer template crafted with love by Dawid Pietrasiak
