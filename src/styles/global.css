@@ -1,12 +1,12 @@
 /**
  * Global Styles
  *
- * Design System: Strict Black & White
+ * Design System: Dark Gray Theme with Grid Lines
  * Style: Editorial, confident, minimal
  *
  * Key Principles:
- * - No colors, no gradients
- * - Contrast through scale and spacing
+ * - Dark gray background with light text
+ * - Grid lines for visual structure
  * - Strong typography hierarchy
  * - Generous whitespace
  * - Subtle, intentional motion
@@ -17,19 +17,23 @@
    ======================================== */
 
 :root {
-  /* Colors - Strict B&W */
-  --color-black: #000000;
-  --color-white: #ffffff;
-  --color-gray-900: #111111;
-  --color-gray-800: #1a1a1a;
-  --color-gray-700: #2d2d2d;
-  --color-gray-600: #4a4a4a;
-  --color-gray-500: #6b6b6b;
-  --color-gray-400: #8c8c8c;
-  --color-gray-300: #b3b3b3;
-  --color-gray-200: #d4d4d4;
-  --color-gray-100: #ebebeb;
-  --color-gray-50: #f5f5f5;
+  /* Colors - Dark Gray Theme */
+  --color-black: #0a0a0a;
+  --color-white: #f5f5f5;
+  --color-gray-900: #0d0d0d;
+  --color-gray-800: #141414;
+  --color-gray-700: #1a1a1a;
+  --color-gray-600: #252525;
+  --color-gray-500: #3a3a3a;
+  --color-gray-400: #525252;
+  --color-gray-300: #737373;
+  --color-gray-200: #a3a3a3;
+  --color-gray-100: #d4d4d4;
+  --color-gray-50: #e5e5e5;
+
+  /* Grid line color */
+  --grid-color: rgba(255, 255, 255, 0.06);
+  --grid-color-accent: rgba(255, 255, 255, 0.1);
 
   /* Typography Scale */
   --font-family-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -142,9 +146,72 @@ body {
   font-size: var(--text-base);
   font-weight: var(--font-normal);
   line-height: var(--leading-normal);
-  color: var(--color-black);
-  background-color: var(--color-white);
+  color: var(--color-white);
+  background-color: var(--color-black);
   min-height: 100vh;
+}
+
+/* ========================================
+   Grid Lines Overlay
+   ======================================== */
+
+.grid-lines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.grid-lines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
+  background-size: 25% 100px;
+}
+
+.grid-lines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, var(--grid-color-accent) 1px, transparent 1px);
+  background-size: 50% 100%;
+}
+
+/* Vertical column lines */
+.grid-columns {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 768px) {
+  .grid-columns {
+    padding: 0 var(--space-12);
+  }
+}
+
+.grid-columns span {
+  width: 1px;
+  height: 100%;
+  background: var(--grid-color);
+}
+
+/* Content should be above grid */
+main, header, footer, section {
+  position: relative;
+  z-index: 2;
 }
 
 /* ========================================
@@ -318,12 +385,12 @@ small {
    ======================================== */
 
 ::selection {
-  background-color: var(--color-black);
-  color: var(--color-white);
+  background-color: var(--color-white);
+  color: var(--color-black);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-black);
+  outline: 2px solid var(--color-white);
   outline-offset: 2px;
 }
 

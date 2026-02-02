@@ -71,7 +71,7 @@ const { slug, title, company, thumbnail, tags = [], index = 0 } = Astro.props;
     position: relative;
     aspect-ratio: 4 / 3;
     overflow: hidden;
-    background-color: var(--color-gray-100);
+    background-color: var(--color-gray-800);
     margin-bottom: var(--space-6);
   }
 
@@ -91,13 +91,13 @@ const { slug, title, company, thumbnail, tags = [], index = 0 } = Astro.props;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--color-gray-100);
+    background-color: var(--color-gray-800);
   }
 
   .placeholder-text {
     font-size: var(--text-6xl);
     font-weight: var(--font-light);
-    color: var(--color-gray-300);
+    color: var(--color-gray-500);
   }
 
   .overlay {
@@ -166,7 +166,7 @@ const { slug, title, company, thumbnail, tags = [], index = 0 } = Astro.props;
   }
 
   .project-link:hover .view-project {
-    color: var(--color-black);
+    color: var(--color-white);
     gap: var(--space-3);
   }
 

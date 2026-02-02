@@ -654,7 +654,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     font-size: var(--text-xs);
     text-transform: uppercase;
     letter-spacing: 0.2em;
-    color: var(--color-gray-500);
+    color: var(--color-gray-300);
     overflow: hidden;
   }
 
@@ -672,13 +672,13 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
   }
 
   .title-line-stroke {
-    -webkit-text-stroke: 2px var(--color-black);
+    -webkit-text-stroke: 2px var(--color-white);
     -webkit-text-fill-color: transparent;
   }
 
   @media (max-width: 768px) {
     .title-line-stroke {
-      -webkit-text-stroke: 1px var(--color-black);
+      -webkit-text-stroke: 1px var(--color-white);
     }
   }
 
@@ -698,7 +698,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
   .hero-tagline {
     font-size: var(--text-xl);
     font-weight: 300;
-    color: var(--color-gray-600);
+    color: var(--color-gray-200);
     max-width: 500px;
     line-height: 1.6;
     overflow: hidden;
@@ -723,7 +723,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
   .scroll-line {
     width: 1px;
     height: 0;
-    background: var(--color-black);
+    background: var(--color-white);
     max-height: 60px;
   }
 
@@ -732,7 +732,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     text-transform: uppercase;
     letter-spacing: 0.2em;
     writing-mode: vertical-rl;
-    color: var(--color-gray-500);
+    color: var(--color-gray-300);
   }
 
   /* Hero Marquee */
@@ -743,8 +743,8 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     right: 0;
     overflow: hidden;
     padding: var(--space-4) 0;
-    border-top: 1px solid var(--color-gray-200);
-    background: var(--color-white);
+    border-top: 1px solid var(--color-gray-600);
+    background: var(--color-gray-900);
   }
 
   .marquee-track {
@@ -758,12 +758,12 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     font-size: var(--text-sm);
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--color-gray-400);
+    color: var(--color-gray-300);
   }
 
   .marquee-separator {
     font-size: 8px;
-    color: var(--color-gray-300);
+    color: var(--color-gray-500);
   }
 
   @keyframes marquee {
@@ -782,9 +782,9 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     text-transform: uppercase;
     letter-spacing: 0.1em;
     text-decoration: none;
-    border: 1px solid var(--color-black);
-    background: var(--color-black);
-    color: var(--color-white);
+    border: 1px solid var(--color-white);
+    background: var(--color-white);
+    color: var(--color-black);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     position: relative;
     overflow: hidden;
@@ -795,22 +795,22 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
   }
 
   .btn-primary {
-    background: var(--color-black);
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-black);
   }
 
   .btn-primary:hover {
-    background: var(--color-gray-800);
+    background: var(--color-gray-100);
   }
 
   .btn-outline {
     background: transparent;
-    color: var(--color-black);
+    color: var(--color-white);
   }
 
   .btn-outline:hover {
-    background: var(--color-black);
-    color: var(--color-white);
+    background: var(--color-white);
+    color: var(--color-black);
   }
 
   .btn-large {
@@ -821,7 +821,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
   .btn-text {
     background: transparent;
     border: none;
-    color: var(--color-black);
+    color: var(--color-white);
     padding: 0;
     position: relative;
   }
@@ -832,7 +832,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     left: 0;
     width: 100%;
     height: 1px;
-    background: var(--color-black);
+    background: var(--color-white);
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -855,7 +855,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
   /* Work Section */
   .work-section {
     padding: var(--space-32) var(--space-6);
-    background: var(--color-gray-50);
+    background: var(--color-gray-800);
   }
 
   @media (min-width: 768px) {
@@ -939,7 +939,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     position: relative;
     aspect-ratio: 16 / 10;
     overflow: hidden;
-    background: var(--color-gray-200);
+    background: var(--color-gray-700);
   }
 
   .project-image-inner {
@@ -955,10 +955,10 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--color-gray-200), var(--color-gray-300));
+    background: linear-gradient(135deg, var(--color-gray-700), var(--color-gray-600));
     font-size: clamp(4rem, 10vw, 8rem);
     font-weight: 200;
-    color: var(--color-gray-400);
+    color: var(--color-gray-500);
   }
 
   .project-image-overlay {
@@ -1000,7 +1000,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
 
   .project-category {
     font-size: var(--text-sm);
-    color: var(--color-gray-500);
+    color: var(--color-gray-400);
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -1054,7 +1054,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
 
   .about-text {
     font-size: var(--text-lg);
-    color: var(--color-gray-600);
+    color: var(--color-gray-300);
     line-height: 1.7;
     margin-bottom: var(--space-6);
   }
@@ -1062,7 +1062,7 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
   .about-text.large {
     font-size: var(--text-2xl);
     font-weight: 300;
-    color: var(--color-black);
+    color: var(--color-white);
     line-height: 1.5;
   }
 
@@ -1072,8 +1072,8 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
     gap: var(--space-8);
     margin: var(--space-12) 0;
     padding: var(--space-8) 0;
-    border-top: 1px solid var(--color-gray-200);
-    border-bottom: 1px solid var(--color-gray-200);
+    border-top: 1px solid var(--color-gray-600);
+    border-bottom: 1px solid var(--color-gray-600);
   }
 
   .stat {
