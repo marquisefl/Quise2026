@@ -234,64 +234,63 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
 </BaseLayout>
 
 <!-- GSAP & Lenis Scripts -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/lenis@1.0.42/dist/lenis.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-<script>
-  // Initialize Lenis smooth scroll
-  const lenis = new Lenis({
-    duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    direction: 'vertical',
-    gestureDirection: 'vertical',
-    smooth: true,
-    smoothTouch: false,
-    touchMultiplier: 2,
-  });
+<script is:inline>
+  // Loader animation - runs immediately with vanilla JS
+  (function() {
+    const loader = document.getElementById('loader');
+    const loaderNumber = document.querySelector('.loader-number');
+    const loaderFill = document.querySelector('.loader-fill');
 
-  function raf(time) {
-    lenis.raf(time);
-    requestAnimationFrame(raf);
-  }
-  requestAnimationFrame(raf);
+    let progress = 0;
 
-  // GSAP ScrollTrigger integration with Lenis
-  lenis.on('scroll', ScrollTrigger.update);
-  gsap.ticker.add((time) => {
-    lenis.raf(time * 1000);
-  });
-  gsap.ticker.lagSmoothing(0);
+    function updateLoader() {
+      progress += Math.random() * 12 + 3;
+      if (progress >= 100) {
+        progress = 100;
+        loaderNumber.textContent = '100';
+        loaderFill.style.width = '100%';
 
-  // Loader animation
-  const loader = document.getElementById('loader');
-  const loaderNumber = document.querySelector('.loader-number');
-  const loaderFill = document.querySelector('.loader-fill');
+        // Animate loader out with CSS
+        setTimeout(() => {
+          loader.style.transition = 'transform 0.8s cubic-bezier(0.76, 0, 0.24, 1)';
+          loader.style.transform = 'translateY(-100%)';
 
-  let progress = 0;
-  const loadInterval = setInterval(() => {
-    progress += Math.random() * 15;
-    if (progress >= 100) {
-      progress = 100;
-      clearInterval(loadInterval);
+          setTimeout(() => {
+            loader.style.display = 'none';
+            document.body.classList.add('loaded');
+            initPage();
+          }, 800);
+        }, 300);
+        return;
+      }
 
-      gsap.to(loader, {
-        yPercent: -100,
-        duration: 1,
-        ease: 'power4.inOut',
-        delay: 0.3,
-        onComplete: () => {
-          loader.style.display = 'none';
-          initAnimations();
-        }
-      });
+      loaderNumber.textContent = Math.floor(progress);
+      loaderFill.style.width = `${progress}%`;
+      setTimeout(updateLoader, 80);
     }
-    loaderNumber.textContent = Math.floor(progress);
-    loaderFill.style.width = `${progress}%`;
-  }, 50);
 
-  // Initialize all animations after loader
-  function initAnimations() {
+    // Start loader
+    updateLoader();
+  })();
+
+  // Initialize page after loader
+  function initPage() {
+    // Check if GSAP loaded
+    if (typeof gsap === 'undefined') {
+      console.warn('GSAP not loaded, using CSS animations');
+      document.querySelectorAll('[data-reveal]').forEach(el => {
+        el.style.opacity = '1';
+        el.style.transform = 'none';
+      });
+      return;
+    }
+
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
     // Hero animations
     gsap.from('.hero-label-inner', {
       yPercent: 100,
@@ -420,93 +419,95 @@ const featuredProjects = siteData.caseStudies.slice(0, 3);
         ease: 'none'
       });
     });
-  }
 
-  // Custom cursor
-  const cursor = document.getElementById('cursor');
-  const cursorDot = cursor.querySelector('.cursor-dot');
-  const cursorOutline = cursor.querySelector('.cursor-outline');
-
-  let mouseX = 0, mouseY = 0;
-  let cursorX = 0, cursorY = 0;
-
-  document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  });
-
-  function animateCursor() {
-    cursorX += (mouseX - cursorX) * 0.15;
-    cursorY += (mouseY - cursorY) * 0.15;
-
-    cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
-    cursorOutline.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
-
-    requestAnimationFrame(animateCursor);
-  }
-  animateCursor();
-
-  // Cursor hover effects
-  document.querySelectorAll('a, button, [data-magnetic]').forEach(el => {
-    el.addEventListener('mouseenter', () => {
-      cursor.classList.add('cursor-hover');
+    // Scroll line animation
+    gsap.to('.scroll-line', {
+      height: '100%',
+      duration: 1.5,
+      ease: 'power2.inOut',
+      repeat: -1,
+      yoyo: true
     });
-    el.addEventListener('mouseleave', () => {
-      cursor.classList.remove('cursor-hover');
-    });
-  });
 
-  // Magnetic effect
-  document.querySelectorAll('[data-magnetic]').forEach(el => {
-    el.addEventListener('mousemove', (e) => {
-      const rect = el.getBoundingClientRect();
-      const x = e.clientX - rect.left - rect.width / 2;
-      const y = e.clientY - rect.top - rect.height / 2;
+    // Custom cursor
+    const cursor = document.getElementById('cursor');
+    if (cursor) {
+      const cursorDot = cursor.querySelector('.cursor-dot');
+      const cursorOutline = cursor.querySelector('.cursor-outline');
 
-      gsap.to(el, {
-        x: x * 0.3,
-        y: y * 0.3,
-        duration: 0.3,
-        ease: 'power2.out'
+      let mouseX = 0, mouseY = 0;
+      let cursorX = 0, cursorY = 0;
+
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+      });
+
+      function animateCursor() {
+        cursorX += (mouseX - cursorX) * 0.15;
+        cursorY += (mouseY - cursorY) * 0.15;
+
+        cursorDot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+        cursorOutline.style.transform = `translate(${cursorX}px, ${cursorY}px)`;
+
+        requestAnimationFrame(animateCursor);
+      }
+      animateCursor();
+
+      // Cursor hover effects
+      document.querySelectorAll('a, button, [data-magnetic]').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('cursor-hover'));
+      });
+
+      // Project hover effects
+      document.querySelectorAll('.project-item').forEach(project => {
+        project.addEventListener('mouseenter', () => cursor.classList.add('cursor-project'));
+        project.addEventListener('mouseleave', () => cursor.classList.remove('cursor-project'));
+      });
+    }
+
+    // Magnetic effect
+    document.querySelectorAll('[data-magnetic]').forEach(el => {
+      el.addEventListener('mousemove', (e) => {
+        const rect = el.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+
+        gsap.to(el, {
+          x: x * 0.3,
+          y: y * 0.3,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+
+      el.addEventListener('mouseleave', () => {
+        gsap.to(el, {
+          x: 0,
+          y: 0,
+          duration: 0.5,
+          ease: 'elastic.out(1, 0.5)'
+        });
       });
     });
 
-    el.addEventListener('mouseleave', () => {
-      gsap.to(el, {
-        x: 0,
-        y: 0,
-        duration: 0.5,
-        ease: 'elastic.out(1, 0.5)'
+    // Project image hover effects
+    document.querySelectorAll('.project-item').forEach(project => {
+      const image = project.querySelector('.project-image-inner');
+      const overlay = project.querySelector('.project-image-overlay');
+
+      project.addEventListener('mouseenter', () => {
+        gsap.to(image, { scale: 1.05, duration: 0.6, ease: 'power2.out' });
+        gsap.to(overlay, { opacity: 0.2, duration: 0.3 });
+      });
+
+      project.addEventListener('mouseleave', () => {
+        gsap.to(image, { scale: 1, duration: 0.6, ease: 'power2.out' });
+        gsap.to(overlay, { opacity: 0, duration: 0.3 });
       });
     });
-  });
-
-  // Project hover effects
-  document.querySelectorAll('.project-item').forEach(project => {
-    const image = project.querySelector('.project-image-inner');
-    const overlay = project.querySelector('.project-image-overlay');
-
-    project.addEventListener('mouseenter', () => {
-      gsap.to(image, { scale: 1.05, duration: 0.6, ease: 'power2.out' });
-      gsap.to(overlay, { opacity: 0.2, duration: 0.3 });
-      cursor.classList.add('cursor-project');
-    });
-
-    project.addEventListener('mouseleave', () => {
-      gsap.to(image, { scale: 1, duration: 0.6, ease: 'power2.out' });
-      gsap.to(overlay, { opacity: 0, duration: 0.3 });
-      cursor.classList.remove('cursor-project');
-    });
-  });
-
-  // Scroll line animation
-  gsap.to('.scroll-line', {
-    height: '100%',
-    duration: 1.5,
-    ease: 'power2.inOut',
-    repeat: -1,
-    yoyo: true
-  });
+  }
 </script>
 
 <style>
